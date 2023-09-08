@@ -13,4 +13,9 @@ Developed a web application for video summarization using Flask framework which 
 2) Install all the dependencies<br>
    **pip install -r requirements.txt**<br>
 
-3) Execute **python app.py**      
+3) Execute **python app.py**
+
+
+# Screensot with Example
+
+<img width="929" alt="vts2" src="https://github.com/arka57/Video-Subtitle-and-Summarizer-using-Deep-Learning/assets/36561428/e2772e1d-19e8-4884-97cf-5323c3aab253">
