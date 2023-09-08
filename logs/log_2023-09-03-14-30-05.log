@@ -1,0 +1,5 @@
+[2023-09-03 14:30:36,373] video_summarizer - INFO - Dataset 'lighteval/summarization' downloaded and saved to 'artifacts\data_ingestion'.
+[2023-09-03 14:30:36,373] video_summarizer - INFO - Train dataset saved to 'artifacts\data_ingestion\train'.
+[2023-09-03 14:30:36,373] video_summarizer - INFO - Test dataset saved to 'artifacts\data_ingestion\test'.
+[2023-09-03 14:30:36,374] video_summarizer - INFO - Data Validation Started
+[2023-09-03 14:30:36,375] video_summarizer - INFO - Data Validation Completed

@@ -1,0 +1,3 @@
+[2023-08-31 19:00:40,171] werkzeug - WARNING -  * Debugger is active!
+[2023-08-31 19:00:40,176] werkzeug - INFO -  * Debugger PIN: 816-508-518
+[2023-08-31 19:01:37,116] werkzeug - INFO -  * Detected change in 'C:\\Users\\arkab\\Documents\\Video_To_Speech\\exception.py', reloading

@@ -1,0 +1,8 @@
+[2023-08-31 18:58:18,073] werkzeug - WARNING -  * Debugger is active!
+[2023-08-31 18:58:18,081] werkzeug - INFO -  * Debugger PIN: 816-508-518
+[2023-08-31 18:58:43,690] root - INFO - We are testing logging file
+[2023-08-31 18:58:43,691] werkzeug - INFO - 127.0.0.1 - - [31/Aug/2023 18:58:43] "GET / HTTP/1.1" 200 -
+[2023-08-31 18:58:43,950] werkzeug - IN[2023-08-31 19:00:39,680] werkzeug - INFO -  * Restarting with stat
+[2023-08-31 19:01:37,161] werkzeug - INFO -  * Restarting with stat
+[2023-08-31 19:01:42,130] werkzeug - INFO -  * Restarting with stat
+ception\\__init__.py', reloading

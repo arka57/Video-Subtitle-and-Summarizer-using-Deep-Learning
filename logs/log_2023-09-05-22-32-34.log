@@ -1,0 +1,4 @@
+[2023-09-05 22:32:41,869] video_summarizer - INFO - Loading tokenizer and model...
+[2023-09-05 22:32:42,511] video_summarizer - INFO - Model not available in the best model directory. Check model trainer artifacts..
+[2023-09-05 22:32:42,513] video_summarizer - INFO - Model not available in the artifacts/model_trainer and best model directory. Check model trainer artifacts..
+[2023-09-05 22:32:42,513] video_summarizer - ERROR - Error loading the model.

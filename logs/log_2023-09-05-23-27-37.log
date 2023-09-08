@@ -1,0 +1,11 @@
+[2023-09-05 23:27:41,690] video_summarizer - INFO - Loading tokenizer and model...
+[2023-09-05 23:27:42,278] video_summarizer - INFO - Model not available in the best model directory. Check model trainer artifacts..
+[2023-09-05 23:27:42,278] video_summarizer - INFO - Model not available in the artifacts/model_trainer and best model directory. Check model trainer artifacts..
+[2023-09-05 23:27:54,492] video_summarizer - INFO - Tokenizer and model loaded from the best directory
+[2023-09-05 23:27:55,505] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.190.208:5000
+[2023-09-05 23:27:55,505] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2023-09-05 23:27:55,508] werkzeug - INFO -  * Restarting with stat
+[2023-09-05 23:29:40,756] werkzeug - INFO -  * Restarting with stat

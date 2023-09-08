@@ -1,0 +1,308 @@
+1
+0:00:00.000 --> 0:00:10.900
+What's going on guys?
+
+2
+0:00:10.900 --> 0:00:12.600
+Hope you're doing amazing.
+
+3
+0:00:12.600 --> 0:00:19.120
+In this video I want to show you how to implement a bidirectional LSTM in PyTorch.
+
+4
+0:00:19.120 --> 0:00:26.760
+So what we're going to do is I have some code set up here which is just some very simple
+
+5
+0:00:26.760 --> 0:00:34.480
+code, some training loop, check accuracy, and the loading damage dataset.
+
+6
+0:00:34.480 --> 0:00:38.000
+This is from my previous video if you want to check this out.
+
+7
+0:00:38.000 --> 0:00:43.520
+And what we want to do is we want to create a bidirectional LSTM.
+
+8
+0:00:43.520 --> 0:00:45.600
+And what we're going to do is we're going to do class.
+
+9
+0:00:45.600 --> 0:00:50.200
+Let's call it bidirectional BRNN.
+
+10
+0:00:50.200 --> 0:00:53.200
+And we're going to inherit an en module.
+
+11
+0:00:53.200 --> 0:00:57.240
+And we're going to do define init.
+
+12
+0:00:57.240 --> 0:00:59.280
+And yeah, let me just mention here that.
+
+13
+0:00:59.280 --> 0:01:03.760
+So what we have is we have the MNN dataset.
+
+14
+0:01:03.760 --> 0:01:13.360
+And MNN is dataset we can view as having 28 sequences which each has 28 features.
+
+15
+0:01:13.360 --> 0:01:17.200
+So the image is a 28 by 28 grid.
+
+16
+0:01:17.200 --> 0:01:20.320
+So we can kind of unroll it row by row.
+
+17
+0:01:20.320 --> 0:01:26.760
+And we can feed that to the RNN sequentially so that each, we have 28 timestamps and each
+
+18
+0:01:26.760 --> 0:01:32.000
+timestamp just takes a single row of the image.
+
+19
+0:01:32.000 --> 0:01:34.840
+And then we just have some number of layers that we're going to use.
+
+20
+0:01:34.840 --> 0:01:37.600
+We have the hidden size of the RNN.
+
+21
+0:01:37.600 --> 0:01:41.840
+Just some parameters and the number of classes learned later, etc.
+
+22
+0:01:41.840 --> 0:01:45.160
+But we're going to send in to the bidirectional RNN.
+
+23
+0:01:45.160 --> 0:01:51.960
+It's just to emphasize the hidden size, the number of layers and the number of classes.
+
+24
+0:01:51.960 --> 0:02:00.600
+We're going to do super B RNN self and then dot init.
+
+25
+0:02:00.600 --> 0:02:06.960
+And then we're going to do self that hidden size is just hidden size.
+
+26
+0:02:06.960 --> 0:02:10.200
+Self that numb layers is just numb layers.
+
+27
+0:02:10.760 --> 0:02:18.120
+And then we're going to define our LSTM and we're going to nN dot LSTM, input size and then hidden
+
+28
+0:02:18.120 --> 0:02:23.720
+size, number of layers that's just sort of the order where we send it in.
+
+29
+0:02:23.720 --> 0:02:29.320
+And then we're going to batch first equals true for the MNN dataset which has batches as
+
+30
+0:02:29.320 --> 0:02:31.240
+the first axis.
+
+31
+0:02:31.240 --> 0:02:37.640
+And then just to make it bidirectional, all we have to do is bidirectional equals true.
+
+32
+0:02:37.640 --> 0:02:39.560
+So easy, no, I guess.
+
+33
+0:02:39.560 --> 0:02:43.560
+And then we're going to do self that fully connected is an endot linear and we're going to
+
+34
+0:02:43.560 --> 0:02:48.840
+do hidden size to a number of classes.
+
+35
+0:02:48.840 --> 0:02:53.240
+And then so we know forward.
+
+36
+0:02:53.240 --> 0:02:56.840
+Just one thing that we need to keep in mind is that we'll we need to define our hidden state
+
+37
+0:02:56.840 --> 0:03:00.200
+and also the cell state that we're going to send into LSTM.
+
+38
+0:03:00.200 --> 0:03:02.120
+And yeah, so let's do that.
+
+39
+0:03:02.120 --> 0:03:06.920
+H0 will be our hidden state towards that zeros and we're going to do self that numb
+
+40
+0:03:07.000 --> 0:03:08.200
+layers.
+
+41
+0:03:08.200 --> 0:03:11.000
+And then we're going to times that by two.
+
+42
+0:03:11.480 --> 0:03:17.320
+And why we do that is that so we have self the number of layers.
+
+43
+0:03:17.320 --> 0:03:24.520
+But we also have, let's see, so we have, so we have self the numb layers.
+
+44
+0:03:24.520 --> 0:03:31.240
+And then we need to times it by two since we have one of them going forward.
+
+45
+0:03:31.240 --> 0:03:33.400
+And one of them going backward.
+
+46
+0:03:33.400 --> 0:03:39.320
+But they're all going to get concatenated into the same specific hidden state.
+
+47
+0:03:39.320 --> 0:03:44.840
+So we need to just expand this tensor by two in this axis.
+
+48
+0:03:45.480 --> 0:03:50.440
+And then we're going to do x dot size of zero just a number of examples we send in.
+
+49
+0:03:50.440 --> 0:03:53.800
+And so the back size and then self that hidden size.
+
+50
+0:03:55.000 --> 0:03:56.280
+And then just dot to the device.
+
+51
+0:03:57.240 --> 0:04:01.160
+Okay, and actually we need to do that here as well.
+
+52
+0:04:01.240 --> 0:04:06.600
+So the end of the linear will take the hidden size by times two since for the same argument.
+
+53
+0:04:06.600 --> 0:04:09.560
+We have one going forward, one going backward.
+
+54
+0:04:09.560 --> 0:04:11.240
+And they're going to get concatenated.
+
+55
+0:04:11.240 --> 0:04:17.000
+And that's sort of the hidden state from that particular time sequence.
+
+56
+0:04:17.880 --> 0:04:20.600
+Yeah, just some background from bi-directional LSTM.
+
+57
+0:04:20.600 --> 0:04:25.800
+I'm sort of assuming in this video that you know the theory behind it.
+
+58
+0:04:25.800 --> 0:04:28.280
+And this is just the sort of the implementation of it.
+
+59
+0:04:28.680 --> 0:04:33.480
+And yeah, so we can just copy this for the cell state.
+
+60
+0:04:34.280 --> 0:04:44.280
+And then we just need to sort of run the LSTM and the H0, cell state in a two pool.
+
+61
+0:04:44.280 --> 0:04:48.840
+And what would be the output here is the is the is the hidden state.
+
+62
+0:04:50.440 --> 0:04:51.480
+And then the cell state.
+
+63
+0:04:52.360 --> 0:04:54.760
+But we're not really going to use those.
+
+64
+0:04:54.760 --> 0:05:00.440
+So we can just remove or we we don't have to look at that output.
+
+65
+0:05:01.080 --> 0:05:03.400
+And then we're just going to do out is.
+
+66
+0:05:05.400 --> 0:05:12.760
+cell.fc of out and we're just going to take the last hidden state sending to the linear layer.
+
+67
+0:05:13.320 --> 0:05:14.920
+And then we're just going to return out.
+
+68
+0:05:15.240 --> 0:05:19.240
+And yeah, all we need to do here is we need to.
+
+69
+0:05:19.880 --> 0:05:26.360
+Inish lies in network with the B RNN and this should be ready to run.
+
+70
+0:05:26.360 --> 0:05:31.000
+So I'm going to run this for guess two e-packs and let's see what kind of results we get.
+
+71
+0:05:32.840 --> 0:05:39.400
+So training for two e-packs we get nine about 97% accuracy, which is I guess not too great.
+
+72
+0:05:40.200 --> 0:05:42.040
+But yeah, we're just training for two e-packs.
+
+73
+0:05:42.040 --> 0:05:45.320
+So you could I guess expand this as well.
+
+74
+0:05:45.320 --> 0:05:47.240
+And you would probably get a lot better accuracy.
+
+75
+0:05:48.200 --> 0:05:52.920
+But yeah, that was that's pretty much it for the bi-directional alicim.
+
+76
+0:05:52.920 --> 0:05:54.920
+If you have any questions, leave them in the comment.
+
+77
+0:05:54.920 --> 0:05:59.320
+Otherwise, thank you so much for watching the video and I hope to see you in the next one.
+

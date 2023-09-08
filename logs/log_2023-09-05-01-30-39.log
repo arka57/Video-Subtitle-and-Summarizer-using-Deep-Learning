@@ -1,0 +1,11 @@
+[2023-09-05 01:30:50,411] video_summarizer - INFO - Dataset 'lighteval/summarization' downloaded and saved to 'artifacts\data_ingestion'.
+[2023-09-05 01:30:50,412] video_summarizer - INFO - Train dataset saved to 'artifacts\data_ingestion\train'.
+[2023-09-05 01:30:50,413] video_summarizer - INFO - Test dataset saved to 'artifacts\data_ingestion\test'.
+[2023-09-05 01:30:50,414] video_summarizer - INFO - Data Validation Started
+[2023-09-05 01:30:50,415] video_summarizer - INFO - Data Validation Completed
+[2023-09-05 01:30:50,416] video_summarizer - INFO - Data Processing Component started..
+[2023-09-05 01:30:50,825] video_summarizer - INFO - Loading datasets from data ingestion artifacts folder for processing
+[2023-09-05 01:30:58,596] video_summarizer - INFO - Data Processing completed.
+[2023-09-05 01:31:02,775] video_summarizer - INFO - Initialize model and tokenizer for training...
+[2023-09-05 01:34:00,973] video_summarizer - INFO - Loading data from data processing artifacts for training...
+[2023-09-05 01:34:01,099] video_summarizer - INFO - setting model trainer class

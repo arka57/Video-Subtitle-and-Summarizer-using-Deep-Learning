@@ -1,0 +1,12 @@
+[2023-09-05 23:35:31,814] video_summarizer - INFO - Loading tokenizer and model...
+[2023-09-05 23:35:33,005] video_summarizer - INFO - Model not available in the best model directory. Check model trainer artifacts..
+[2023-09-05 23:35:33,007] video_summarizer - INFO - Model not available in the artifacts/model_trainer and best model directory. Check model trainer artifacts..
+[2023-09-05 23:35:41,461] video_summarizer - INFO - Tokenizer and model loaded from the best directory
+[2023-09-05 23:35:41,487] werkzeug - WARNING -  * Debugger is active!
+[2023-09-05 23:35:41,495] werkzeug - INFO -  * Debugger PIN: 816-508-518
+[2023-09-05 23:35:45,072] werkzeug - INFO - 127.0.0.1 - - [05/Sep/2023 23:35:45] "GET / HTTP/1.1" 200 -
+[2023-09-05 23:35:55,368] video_summarizer - INFO - Youtube Video downloaded to uploads/Pytorch Bidirectional LSTM example.3gpp
+[2023-09-05 23:35:56,459] video_summarizer - INFO - Generating subtitles for Pytorch Bidirectional LSTM example.wav... This might take a while.
+[2023-09-05 23:36:42,889] video_summarizer - INFO - Initiating summarizer...
+[2023-09-05 23:36:59,512] werkzeug - INFO - 127.0.0.1 - - [05/Sep/2023 23:36:59] "POST /transcribe HTTP/1.1" 200 -
+[2023-09-05 23:36:59,935] werkzeug - INFO - 127.0.0.1 - - [05/Sep/2023 23:36:59] "[35m[1mGET /audio/summary.mp3 HTTP/1.1[0m" 206 -

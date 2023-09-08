@@ -1,0 +1,7 @@
+[2023-09-05 23:35:05,036] video_summarizer - INFO - Loading tokenizer and model...
+[2023-09-05 23:35:05,720] video_summarizer - INFO - Model not available in the best model directory. Check model trainer artifacts..
+[2023-09-05 23:35:05,720] video_summarizer - INFO - Model not available in the artifacts/model_trainer and best model directory. Check model trainer artifacts..
+[2023-09-05 23:35:13,306] video_summarizer - INFO - Tokenizer and model loaded from the best directory
+[2023-09-05 23:35:13,350] werkzeug - WARNING -  * Debugger is active!
+[2023-09-05 23:35:13,356] werkzeug - INFO -  * Debugger PIN: 816-508-518
+[2023-09-05 23:35:22,982] werkzeug - INFO -  * Detected change in 'c:\\users\\arkab\\documents\\video_to_speech\\src1\\components\\video_to_subtitle.py', reloading

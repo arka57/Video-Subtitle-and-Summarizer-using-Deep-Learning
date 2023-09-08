@@ -1,0 +1,12 @@
+torch
+transformers
+datasets
+nltk
+evaluate
+rouge_score
+accelerate
+pandas
+flask
+ffmpeg-python
+gTTS
+pytube
