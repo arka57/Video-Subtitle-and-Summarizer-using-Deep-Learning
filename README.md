@@ -6,3 +6,11 @@ Developed a web application for video summarization using Flask framework which 
 **Summarization:** The application summarizes the transcribed text to provide a concise overview of the video's content,making it easier for users to to grasp main points<br><br>
 **Audio Playback:** Users can listen to the summary of the video through text-to-speech conversion enhancing the user experience.
 <br>
+
+# Execution of the project
+1) Create virtual environment in your system<br>
+   **conda create -p env python==3.10 -y**<br>
+2) Install all the dependencies<br>
+   **pip install -r requirements.txt**<br>
+
+3) Execute **python app.py**      
